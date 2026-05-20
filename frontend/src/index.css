@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Calm Sage Green Primary Palette */
+    --color-primary-50: #f4f8f6;
+    --color-primary-100: #e5effa;
+    --color-primary-100: #e6f0eb;
+    --color-primary-200: #cfdfd6;
+    --color-primary-300: #a9c6b8;
+    --color-primary-400: #7da593;
+    --color-primary-500: #588270; /* Core Sage */
+    --color-primary-600: #446756;
+    --color-primary-700: #375346;
+    --color-primary-800: #2d4339;
+    --color-primary-900: #263830;
+
+    /* Calm Warm Amber Secondary Palette */
+    --color-secondary-50: #fbfbf4;
+    --color-secondary-100: #f7f5df;
+    --color-secondary-200: #ebe6b5;
+    --color-secondary-300: #dbd081;
+    --color-secondary-400: #c9b653;
+    --color-secondary-500: #ad9736; /* Core Muted Gold/Amber */
+    --color-secondary-600: #8c7827;
+    --color-secondary-700: #705f1e;
+    --color-secondary-800: #5b4d19;
+    --color-secondary-900: #4c4015;
+
+    --font-sans: 'Outfit';
+    --font-arabic: 'Cairo';
+  }
+
+  .dark {
+    /* Softer and slightly lighter Sage Green for dark mode readability */
+    --color-primary-50: #1b2621;
+    --color-primary-100: #22352c;
+    --color-primary-200: #2f4c3f;
+    --color-primary-300: #3e6654;
+    --color-primary-400: #4f826b;
+    --color-primary-500: #6ea48c;
+    --color-primary-600: #8fbfaa;
+    --color-primary-700: #b4dbcb;
+    --color-primary-800: #d6ede4;
+    --color-primary-900: #f2faf6;
+
+    /* Warm Gold for dark mode */
+    --color-secondary-50: #262315;
+    --color-secondary-100: #35301a;
+    --color-secondary-200: #4c4424;
+    --color-secondary-300: #665b2e;
+    --color-secondary-400: #827339;
+    --color-secondary-500: #c0ab58;
+    --color-secondary-600: #d4c06d;
+    --color-secondary-700: #e5d58d;
+    --color-secondary-800: #f2e7b5;
+    --color-secondary-900: #faf7e1;
+  }
+
+  body {
+    font-family: var(--font-sans), sans-serif;
+  }
+
+  html[dir="rtl"] body {
+    font-family: var(--font-arabic), sans-serif;
+  }
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .glass {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.5);
+}
