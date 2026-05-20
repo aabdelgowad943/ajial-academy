@@ -6,7 +6,10 @@ import CourseCard from '../components/CourseCard';
 import OwnerCard from '../components/OwnerCard';
 import TestimonialCard from '../components/TestimonialCard';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+const API_URL = (() => {
+  const url = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+  return url.endsWith('/api') ? url : `${url}/api`;
+})();
 
 export default function Home() {
   const { language, t, isRtl } = useLanguage();

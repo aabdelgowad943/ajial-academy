@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useLanguage } from '../components/LanguageContext';
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+const API_URL = (() => {
+  const url = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
+  return url.endsWith('/api') ? url : `${url}/api`;
+})();
 
 export default function Contact() {
   const { t } = useLanguage();

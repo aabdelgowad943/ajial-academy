@@ -449,3 +449,6 @@ async function seedDatabase() {
     console.error('Database seeding failed:', error);
   }
 }
+
+export default app;
+
